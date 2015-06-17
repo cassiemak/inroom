@@ -8,9 +8,9 @@ app.controller('HomeCtrl', ['$scope', function($scope){
   $scope.infotab = false;
   $scope.shoppingCart = [];
 
-  $scope.infoSwitch = function(){
-    $scope.infotab = !$scope.infotab;
-  }
+  // $scope.infoSwitch = function(){
+  //   $scope.infotab = !$scope.infotab;
+  // }
 
   $scope.switch = function(p, ref) {
     if (p == 'tab') {
@@ -48,6 +48,8 @@ app.controller('HomeCtrl', ['$scope', function($scope){
         "Purchase",
         {ref:ref,locale:I18n.locale}
       );
+      console.log('Pop up says Our staff will contact you shortly. Thank you for your order!');
+      $('#thanks-order').stop(true, true).show().css('opacity', 0.8).delay(3000).fadeOut(1000);
     }
   }
 

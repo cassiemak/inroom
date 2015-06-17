@@ -7,18 +7,18 @@
   <div class="info row same-day">
   </div>
 
-  <div class="row delivery">
+<!--   <div class="row delivery">
     <%= I18n.t('same_day_delivery') %>
-  </div>
+  </div> -->
 
   <h1 class="row general_heading"><span>{{category}}</span></h1>
 
   <div class="shoppingItem" ng-repeat="product in products">
     <div class="oneshoppingItem row">
-      <div class="shopping-pix col-xs-4">
+      <!--<div class="shopping-pix col-xs-4">
         <a ng-click="setProduct(product, 'home-image')"><img src='{{product.pix}}'></a>
-      </div>
-      <div class="shopping-details col-xs-8">
+      </div> -->
+      <div class="shopping-details col-xs-offset-1 col-xs-8">
         <div class="shopping-title"><h2><a ng-click="setProduct(product, 'home-name')">{{product.name}}</a></h2></div>
         <div class="shopping-description">{{product.description}}</div>
         <div class="shopping-price">HKD {{product.price}}</div>
@@ -36,7 +36,7 @@
     <button class="btn btn-xs cart-button" ng-click="switch('tab', 'home-checkout')"><%= I18n.t('check_out') %></button>
   </div>
 
-  <div class="footer row">
+<!--   <div class="footer row">
     <div class="categories">
       <button class="col-xs-2" ng-click="getProducts('souvenirs')"><img src="<%=asset_path('SOUVENIRS.png')%>"></button>
       <button class="col-xs-2" ng-click="getProducts('beauty')"><img src="<%=asset_path('BEAUTY.png')%>"></button>
@@ -45,9 +45,11 @@
       <button class="col-xs-2" ng-click="getProducts('smartphones')"><img src="<%=asset_path('SMARTPHONE.png')%>"></button>
       <button class="col-xs-2" ng-click="getProducts('watches')"><img src="<%=asset_path('WATCHES.png')%>"></button>
     </div>
-  </div>
+  </div> -->
+
 </div>
 
+<!-- Product Detail -->
 <div class="container-fluid" ng-show="detail">
   <header class="row">
     <h1 class="text-center">{{product.name}}</h1>
@@ -102,16 +104,16 @@
 
   <div class="shoppingItem" ng-repeat="product in shoppingCart">
     <div class="oneshoppingItem row">
-      <div class="shopping-pix col-xs-6">
+      <!-- <div class="shopping-pix col-xs-6">
         <img src='{{product.piece.pix}}'>
-      </div>
-      <div class="shopping-details col-xs-6">
+      </div> -->
+      <div class="shopping-details col-xs-offset-1 col-xs-11">
         <div class="shopping-title"><h2>{{product.piece.name}}</h2></div>
         <div class="shopping-description">{{product.piece.description}}</div>
         <div class="shopping-price">HKD {{product.price}} x {{product.quantity}} </div>
+        <h2 class="shopping-price">Subtotal: {{product.subtotal}} </h2>
         <div>
           <!-- <h2 class="oos">Out of Stock</h2> -->
-          <h2 class="shopping-price">Subtotal: {{product.subtotal}} </h2>
         </div>
       </div>
     </div>
@@ -128,3 +130,5 @@
 </div>
 
 <div id="toast"><%= I18n.t('item_added_to_cart') %></div>
+<div id="thanks-order"><%= I18n.t('checking_out') %></div>
+
