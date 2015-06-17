@@ -1,0 +1,489 @@
+$hover: #FF5600;
+$brand-orange: black;
+$primary-font-color: white; 
+$primary-background: white;
+
+
+header {
+  background-color: $brand-orange;
+  color: $primary-font-color;
+  text-align: center;
+  h1 {
+    font-family: GillSans;
+    font-size: 20px;
+    display: inline-block;
+  }
+  > i {
+    padding-left: 0;
+    position: fixed;
+    right: 0;
+    &:hover{
+      color: $hover;
+    }
+  }
+}
+
+.info.same-day{
+  opacity: 0.8;
+  font-size: 8px;
+  padding: 2px;
+}
+
+#checkout{
+  position: fixed;
+  right: 0;
+  top:15px;
+  font-size: 20px;
+  &:hover{
+      color: $hover;
+    }
+}
+
+.info {
+  background-color: black;
+  color: $primary-font-color;
+  padding-bottom: 5px;
+  font-size: 10px;
+  font-family: Helvetica;
+  text-align: center;
+}
+
+
+div.dropdown{
+  display: inline-block;
+  font-size: 10px;
+  font-family: Helvetica;
+  padding-left: 5px;
+
+  > div {
+    font-size: 12px;
+      &:hover{
+      color: $hover;
+    }
+  }
+}
+
+div.back{
+  background-color: black;
+  color: $primary-font-color;
+  padding-bottom: 5px;
+  font-size: 10px;
+  font-family: Helvetica;
+}
+
+.cart{
+  display: inline-block;
+  right: 0;
+  position: fixed;
+  font-size: 10px;
+  // text-align: right;
+  font-family: Helvetica;
+}
+
+.total > h1{
+  font-size: 16px;
+  font-weight: bold;
+  text-align: right;
+  font-family: Helvetica;
+}
+
+
+
+// shoppingItem
+
+.oneshoppingItem {
+  min-height: 160px;
+
+}
+
+.oneshoppingItem:hover {
+  background-color: $primary-background;
+  color: $brand-orange;
+}
+
+.shopping-pix > img{
+  // max-height: 150px;
+  // max-width: 150px;
+  max-width: 100%; 
+  height: auto; 
+}
+
+img{
+  // max-height: 100px;
+  // height: auto;
+  // max-width: 100px;
+
+  max-width: 100%; 
+  height: auto; 
+  // width: auto;
+  /*max-width: 100%;*/
+  margin: auto;
+  display: block; 
+}
+
+.shopping-title > h2{
+  font-size: 14px;
+  font-weight: bold;
+  // font-style: 
+}
+
+.shopping-quantity{
+  display: inline-block;
+}
+
+.shopping-description{
+  overflow: scroll;
+  font-size: 12px;
+  font-family: Helvetica;
+}
+
+.shopping-price{
+  font-size: 12px;
+  font-family: Helvetica;
+}
+
+button.cart-button{
+  display: inline-block;
+  border:1px solid #b7b7b7; 
+  -webkit-border-radius: 3px; 
+  -moz-border-radius: 3px;
+  padding: 3px 3px 3px 3px; 
+  text-decoration:none; 
+  text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+  font-weight:bold; 
+  color: #FFFFFF;
+  background-color: #d3d3d3; 
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d3d3d3), to(#707070));
+  background-image: -webkit-linear-gradient(top, #d3d3d3, #707070);
+  background-image: -moz-linear-gradient(top, #d3d3d3, #707070);
+  background-image: -ms-linear-gradient(top, #d3d3d3, #707070);
+  background-image: -o-linear-gradient(top, #d3d3d3, #707070);
+  background-image: linear-gradient(to bottom, #d3d3d3, #707070);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#d3d3d3, endColorstr=#707070);
+  &:hover{
+    border:1px solid #a0a0a0;
+    background-color: #bababa; 
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#bababa), to(#575757));
+    background-image: -webkit-linear-gradient(top, #bababa, #575757);
+    background-image: -moz-linear-gradient(top, #bababa, #575757);
+    background-image: -ms-linear-gradient(top, #bababa, #575757);
+    background-image: -o-linear-gradient(top, #bababa, #575757);
+    background-image: linear-gradient(to bottom, #bababa, #575757);
+    filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#bababa, endColorstr=#575757);
+  }
+}
+
+.oos{
+  color: red;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: Helvetica;
+}
+
+
+// footer
+.categories {
+  display: block;
+  bottom: 0;
+  background-color: $brand-orange;
+  color: $primary-font-color;
+  font-family: Helvetica;
+}
+
+
+.categories > button{
+  display: inline-block;
+  border: none;
+  background-color: $primary-background;
+}
+
+// this doesnt work
+div.categories > button:active{
+  outline: none;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+}
+
+header {
+  position:relative;
+  background:#FFFFFF;
+}
+
+header h1 {
+  font-family:'Molengo', Helvetica;
+  font-weight:400;
+  letter-spacing:10px;
+  font-size:24px;
+  margin-top:32px;
+  margin-bottom:32px;
+  color:#000000;
+}
+
+.info.same-day {
+  opacity:1.0;
+  height:18px;
+  padding:5px 0;
+  background:#000000;
+  color:#FFFFFF;
+}
+
+.delivery {
+  text-align:center;
+  font-family:'Old Standard TT', serif;
+  font-size:18px;
+  font-style:italic;
+  background:#EEEEEE;
+  padding:10px 0;
+}
+
+.general_heading {
+  font-family:'Droid Sans', sans-serif;
+  color:#513847;
+  font-size:36px;
+  margin:20px 0;
+  padding:0 15px;
+  line-height:40px;
+  background:url('/image/header_bgr.png') left top;
+}
+
+.shoppingItem,
+.shoppingItem .shopping-description,
+.shoppingItem .shopping-price {
+  font-family:'Droid Sans', sans-serif;
+  color:#4B4B4B;
+}
+
+.shoppingItem {
+  padding-top:30px;
+  padding-bottom:30px;
+}
+
+.shoppingItem .shopping-title h2 {
+  font-size:24px;
+  margin-bottom:3px;
+}
+
+.shoppingItem .shopping-title h2 a {
+  color:#000000;
+}
+
+.shoppingItem .shopping-price {
+  font-size:24px;
+  margin-bottom:20px;
+}
+
+.shoppingItem .quantity {
+  height:42px;
+  font-size:20px;
+  padding:0;
+  text-align:center;
+}
+
+.shoppingItem .shopping-quantity button {
+  color:#444;
+  width:auto;
+  padding:3px 15px;
+  text-shadow: 0px 1px 0px #fff;
+  line-height: 36px;
+  font-size: 20px;
+  font-weight: normal;
+  background: #f8f8f8 url('/image/grad.png') left top repeat-x;
+  background-size:auto 100%;
+  border:0;
+}
+
+/*
+.shoppingItem .shopping-quantity button:hover {
+  background-color: #00d0dd;
+  text-shadow: none;
+  color: #FFFFFF;
+}
+*/
+
+.shoppingItem .shopping-pix {
+  width:300px;
+  padding-left:40px;
+}
+
+.shoppingItem .shopping-details {
+  width:335px;
+  padding-left:10px;
+}
+
+.container-fluid {
+  padding-bottom:140px;
+}
+
+.footer {
+  position:fixed;
+  width:100%;
+  background:#FFFFFF;
+  border-top:1px solid #333333;
+  font-size:0;
+}
+
+.footer button {
+  display:inline-block;
+  width:106.6px;
+  padding:8px 0;
+  border:0;
+  background:#FFFFFF;
+}
+
+.footer button img {
+  width:60%;
+  border:0;
+  background:#FFFFFF;
+}
+
+.checkout {
+  text-align:center;
+  margin-top:40px;
+}
+
+.checkout button,
+.footer button.btn {
+  color:#444;
+  width:auto;
+  padding:5px 20px;
+  text-shadow: 0px 1px 0px #fff;
+  line-height: 48px;
+  font-size: 32px;
+  font-family:'Droid Sans', sans-serif;
+  font-weight: normal;
+  background: #f8f8f8 url('/image/grad.png') left top repeat-x;
+  background-size:auto 100%;
+  border:0;
+}
+
+.footer button.btn {
+  opacity:0.3;
+}
+
+.footer h1 {
+  text-align:center;
+  font-size:32px;
+  margin-bottom:10px;
+  font-family:'Droid Sans', sans-serif;
+}
+
+.footer .center {
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.shopping-quantity a {
+  float:left;
+  line-height:42px;
+  font-size:24px;
+  padding:0 0 0 15px;
+  text-decoration:none;
+}
+
+.shopping-quantity a:hover {
+  text-decoration:none;
+}
+
+.shopping-quantity a.minus {
+  padding:0 15px 0 0;
+}
+
+.oos {
+  font-weight:normal;
+  font-size:24px;
+  font-family:'Droid Sans', sans-serif;
+}
+
+#checkout {
+  position:absolute;
+  color:#000000;
+  font-size:40px;
+  right:10px;
+}
+
+#remove {
+  position:absolute;
+  color:#000000;
+  font-size:40px;
+  left:10px;
+  top:15px;
+  right:inherit;
+  &:hover {
+    color:$hover;
+  }
+}
+
+#back {
+  position:absolute;
+  color:#000000;
+  font-size:40px;
+  left:10px;
+  top:15px;
+  right:inherit;
+  &:hover {
+    color:$hover;
+  }
+}
+
+.shoppingItem .shopping-description {
+  overflow:visible;
+  font-size:24px;
+  margin-bottom:10px;
+  line-height:28px;
+}
+
+.shoppingItem.detail {
+  padding:0 20px;
+}
+
+.shoppingItem.detail .shopping-details {
+  width:auto;
+  padding-left:0;
+}
+
+.shoppingItem.detail .shopping-title h2,
+.shoppingItem.detail .shopping-description,
+.shoppingItem.detail .shopping-price {
+  font-size:32px;
+  line-height:36px;
+}
+
+.shoppingItem.detail .shopping-description2 {
+  margin-top:30px;
+  font-family:'Droid Sans', sans-serif;
+  color:#4B4B4B;
+  font-size:24px;
+}
+
+.shoppingItem.detail .shopping-quantity button {
+  line-height: 48px;
+  font-size: 32px;
+}
+
+.shoppingItem.detail .shopping-quantity a {
+  line-height:60px;
+  font-size:40px;
+}
+
+.shoppingItem.detail .shopping-quantity input {
+  height:56px;
+  font-size:36px;
+}
+
+#toast {
+display:none;
+position: fixed;
+bottom:120px;
+left: 50%;
+width: 300px;
+font-size:24px;
+margin-left: -150px;
+border: 1px solid #666;
+background:#000000;
+color:#FFFFFF;
+padding: 10px 0 ;
+text-align:center;
+opacity:0.8;
+}

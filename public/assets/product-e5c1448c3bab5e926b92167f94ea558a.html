@@ -1,0 +1,129 @@
+<div class="container-fluid" ng-show="home">
+  <header class="row">
+    <h1 class="text-center">IN-ROOM SHOPPING</h1>
+    <i id="checkout" class="glyphicon glyphicon-shopping-cart btn" ng-click="switch('tab', 'home-cart')"></i>
+  </header>
+
+  <div class="info row same-day">
+  </div>
+
+  <div class="row delivery">
+    * Same day free delivery<br>for orders placed before 12 pm
+  </div>
+
+  <h1 class="row general_heading"><span>{{category}}</span></h1>
+
+  <div class="shoppingItem" ng-repeat="product in products">
+    <div class="oneshoppingItem row">
+      <div class="shopping-pix col-xs-4">
+        <a ng-click="setProduct(product, 'home-image')"><img src='{{product.pix}}'></a>
+      </div>
+      <div class="shopping-details col-xs-8">
+        <div class="shopping-title"><h2><a ng-click="setProduct(product, 'home-name')">{{product.name}}</a></h2></div>
+        <div class="shopping-description">{{product.description}}</div>
+        <div class="shopping-price">HKD {{product.price}}</div>
+        <div class="shopping-button">
+          <div class="shopping-quantity">
+            <a class="minus" ng-click="quantity = quantity > 1 ? quantity - 1 : 1"><span class="glyphicon glyphicon-minus"></span></a><input type="" ng-model="quantity" ng-init="quantity=1" class="col-xs-2 quantity"><a ng-click="quantity=quantity+1"><span class="glyphicon glyphicon-plus"></span></a>
+            <button class="btn btn-xs cart-button col-xs-offset-1 col-xs-5" ng-click="addItem(product.price, quantity, product.id, 'home-add')">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="checkout">
+    <button class="btn btn-xs cart-button" ng-click="switch('tab', 'home-checkout')">CHECK OUT</button>
+  </div>
+
+  <div class="footer row">
+    <div class="categories">
+      <button class="col-xs-2" ng-click="getProducts('souvenirs')"><img src="/assets/SOUVENIRS-19d4b72420a01a5f35301a297d71b833.png"></button>
+      <button class="col-xs-2" ng-click="getProducts('beauty')"><img src="/assets/BEAUTY-777b6a8f25d8993e521b9206bfedaa7d.png"></button>
+      <button class="col-xs-2" ng-click="getProducts('health')"><img src="/assets/HEALTH-580d6ad247009779463db546e851b90c.png"></button>
+      <button class="col-xs-2" ng-click="getProducts('jewellery')"><img src="/assets/JEWELLERY-fd19f8e26872f35a72657a2405d7bf9a.png"></button>
+      <button class="col-xs-2" ng-click="getProducts('smartphones')"><img src="/assets/SMARTPHONE-85de0d2cace275f0b9cf97662b8f7834.png"></button>
+      <button class="col-xs-2" ng-click="getProducts('watches')"><img src="/assets/WATCHES-2b2285b8212ff5c20b844046f7505699.png"></button>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid" ng-show="detail">
+  <header class="row">
+    <h1 class="text-center">{{product.name}}</h1>
+    <i id="back" class="glyphicon glyphicon-chevron-left btn" ng-click="switch('home', 'product-back')"></i>
+  </header>
+
+  <div class="info row same-day">
+  </div>
+
+  <h1 class="row general_heading"><span>{{product.description}}</span></h1>
+
+  <div><img src='{{product.pix}}' width="100%"></div>
+
+  <div class="shoppingItem detail">
+    <div class="oneshoppingItem">
+      <div class="shopping-details">
+        <div class="shopping-title"><h2>{{product.name}}</h2></div>
+        <div class="shopping-description">{{product.description}}</div>
+        <div class="shopping-price">HKD {{product.price}}</div>
+        <div class="shopping-button">
+          <div class="shopping-quantity">
+            <a class="minus" ng-click="quantity = quantity > 1 ? quantity - 1 : 1"><span class="glyphicon glyphicon-minus"></span></a><input type="" ng-model="quantity" ng-init="quantity=1" class="col-xs-2 quantity"><a ng-click="quantity=quantity+1"><span class="glyphicon glyphicon-plus"></span></a>
+            <button class="btn btn-xs cart-button col-xs-offset-1 col-xs-5" ng-click="addItem(product.price, quantity, product.id, 'product-add')">Add to Cart</button>
+          </div>
+        </div>
+        <div class="shopping-description2" ng-bind-html="product.description2"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer row">
+    <div class="categories">
+      <button class="col-xs-2" ng-click="getProducts('souvenirs')"><img src="/assets/SOUVENIRS-19d4b72420a01a5f35301a297d71b833.png"></button>
+      <button class="col-xs-2" ng-click="getProducts('beauty')"><img src="/assets/BEAUTY-777b6a8f25d8993e521b9206bfedaa7d.png"></button>
+      <button class="col-xs-2" ng-click="getProducts('health')"><img src="/assets/HEALTH-580d6ad247009779463db546e851b90c.png"></button>
+      <button class="col-xs-2" ng-click="getProducts('jewellery')"><img src="/assets/JEWELLERY-fd19f8e26872f35a72657a2405d7bf9a.png"></button>
+      <button class="col-xs-2" ng-click="getProducts('smartphones')"><img src="/assets/SMARTPHONE-85de0d2cace275f0b9cf97662b8f7834.png"></button>
+      <button class="col-xs-2" ng-click="getProducts('watches')"><img src="/assets/WATCHES-2b2285b8212ff5c20b844046f7505699.png"></button>
+    </div>
+  </div>
+</div>
+
+<!-- Total Page -->
+<div class="container-fluid" ng-show="tab">
+  <header class="row">
+    <h1 class="text-center">SHOPPING CART</h1>
+    <i id="remove" class="glyphicon glyphicon-remove btn" ng-click="switch('home', 'cart-back')"></i>
+  </header>
+
+  <div class="info row same-day">
+  </div>
+
+  <div class="shoppingItem" ng-repeat="product in shoppingCart">
+    <div class="oneshoppingItem row">
+      <div class="shopping-pix col-xs-6">
+        <img src='{{product.piece.pix}}'>
+      </div>
+      <div class="shopping-details col-xs-6">
+        <div class="shopping-title"><h2>{{product.piece.name}}</h2></div>
+        <div class="shopping-description">{{product.piece.description}}</div>
+        <div class="shopping-price">HKD {{product.price}}</div>
+        <div>
+          <h2 class="oos">Out of Stock</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer row">
+    <div class="total">
+      <h1>Total: HKD 0</h1>
+      <div class="center">
+        <button class="btn btn-xs cart-button" ng-click="switch('purchase', 'cart')">PROCEED TO PURCHASE</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toast">Item(s) added to cart.</div>

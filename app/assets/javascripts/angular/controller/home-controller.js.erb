@@ -1,0 +1,217 @@
+app.controller('HomeCtrl', ['$scope', function($scope){
+  console.log('this is home controller');
+
+  $scope.total = 0;
+  $scope.quantity = 1;
+  $scope.tab = false;
+  $scope.home = true;
+  $scope.infotab = false;
+  $scope.shoppingCart = [];
+
+  $scope.infoSwitch = function(){
+    $scope.infotab = !$scope.infotab;
+  }
+
+  $scope.switch = function(p, ref) {
+    if (p == 'tab') {
+      mixpanel.track(
+        "Shopping Cart",
+        {ref:ref,locale:I18n.locale}
+      );
+
+      $scope.detail = false;
+      $scope.tab = true;
+      $scope.home = false;
+    }
+    else if (p == 'home') {
+      mixpanel.track(
+        "Home",
+        {ref:ref,locale:I18n.locale}
+      );
+
+      $scope.detail = false;
+      $scope.tab = false;
+      $scope.home = true;a
+    }
+    else if (p == 'detail') {
+      mixpanel.track(
+        "Product",
+        {ref:ref,name:$scope.product.name,description:$scope.product.description,locale:I18n.locale}
+      );
+
+      $scope.detail = true;
+      $scope.tab = false;
+      $scope.home = false;
+    }
+    else if (p == 'purchase') {
+      mixpanel.track(
+        "Purchase",
+        {ref:ref,locale:I18n.locale}
+      );
+    }
+  }
+
+  $scope.addItem = function (p, q, id, ref) {
+    if (q > 0){
+      $scope.total = $scope.total + (p * q);
+      console.log($scope.total, p, q, id);
+      var purchase = {
+        quantity: q,
+        price: p,
+        piece: $scope.products[id],
+        id: id,
+      };
+
+      mixpanel.track(
+        "Add",
+        {ref:ref,name:purchase.piece.name,description:purchase.piece.description,quantity:q,locale:I18n.locale}
+      );
+
+      var found = false;
+      for (var i = 0; i < $scope.shoppingCart.length; i++) {
+        if ($scope.shoppingCart[i]['id'] == id) {
+          $scope.shoppingCart[i]['quantity'] += q;
+          found = true;
+          break;
+        }
+      }
+      if (!found) {
+        $scope.shoppingCart.push(purchase);
+      }
+      console.log($scope.shoppingCart);
+
+      $('#toast').stop(true, true).show().css('opacity', 0.8).delay(3000).fadeOut(1000);
+    }
+    else {
+      console.log("invalid quantity");
+    }
+  }
+
+  var items = {
+    smartphones:[],
+    souvenirs:[],
+    beauty: [],
+    health: [],
+    jewellery: [],
+    watches:[],
+  };
+
+  var categories = {
+    smartphones:I18n.t('smartphones'),
+    souvenirs:I18n.t('souvenirs'),
+    beauty:I18n.t('beauty'),
+    health:I18n.t('health'),
+    jewellery:I18n.t('jewellery'),
+    watches:I18n.t('watches'),
+  };
+
+  items.souvenirs = {
+  0:{
+      id: 0, 
+      name: I18n.t('p0.name'),
+      description: I18n.t('p0.description'),
+      description2: I18n.t('p0.description2'),
+      price: 138,
+      pix: "<%=asset_path('KeeWah.png')%>"
+  },
+  1:{
+      id: 1, 
+      name: I18n.t('p1.name'),
+      description: I18n.t('p1.description'),
+      description2: I18n.t('p1.description2'),
+      price: 80,
+      pix: "<%=asset_path('KeeWah2.png')%>"
+  },
+  2:{
+      id: 2,
+      name: I18n.t('p2.name'),
+      description: I18n.t('p2.description'),
+      description2: I18n.t('p2.description2'),
+      price: 36,
+      pix: "<%=asset_path('KoiKei.png')%>"
+  },
+  3:{
+      id: 3, 
+      name: I18n.t('p3.name'),
+      description: I18n.t('p3.description'),
+      description2: I18n.t('p3.description2'),
+      price: 165,
+      pix: "<%=asset_path('Jenny1.png')%>"
+  },
+  4:{
+      id: 4,
+      name: I18n.t('p4.name'),
+      description: I18n.t('p4.description'),
+      description2: I18n.t('p4.description2'),
+      price: 248,
+      pix: "<%=asset_path('brands.png')%>"
+  }};
+
+  items.beauty = {
+  5:{
+      id: 5, 
+      name: I18n.t('p5.name'),
+      description: I18n.t('p5.description'),
+      description2: I18n.t('p5.description2'),
+      price: 1300,
+      pix: "<%=asset_path('SKII.png')%>"
+  }};
+
+  items.health = {
+  6:{
+      id: 6, 
+      name: I18n.t('p6.name'),
+      description: I18n.t('p6.description'),
+      description2: I18n.t('p6.description2'),
+      price: 272,
+      pix: "<%=asset_path('Friso.png')%>"
+  }};
+
+  items.smartphones = {
+  7:{
+      id: 7, 
+      name: I18n.t('p7.name'),
+      description: I18n.t('p7.description'),
+      description2: I18n.t('p7.description2'),
+      price: 8088,
+      pix: "<%=asset_path('Iphone.png')%>"
+  }};
+
+  items.watches = {
+  8:{
+      id: 8, 
+      name: I18n.t('p8.name'),
+      description: I18n.t('p8.description'),
+      description2: I18n.t('p8.description2'),
+      price: 4400,
+      pix: "<%=asset_path('Tissot.png')%>"
+  }};
+
+  items.jewellery = {
+  9:{
+      id: 9, 
+      name: I18n.t('p9.name'),
+      description: I18n.t('p9.description'),
+      description2: I18n.t('p9.description2'),
+      price: 4760,
+      pix: "<%=asset_path('Mabelle.png')%>"
+  }};
+
+  $scope.products = items.souvenirs;
+  $scope.category = categories.souvenirs;
+  $scope.getProducts = function(params){
+    mixpanel.track(
+      "Category",
+      {ref:'category-menu',category:params,locale:I18n.locale}
+    );
+
+    $scope.category = categories[params];
+    $scope.products = items[params];
+    $scope.switch('home', 'category-menu');
+  };
+
+  $scope.setProduct = function(product, ref){
+    $scope.product = product;
+    $scope.switch('detail', ref);
+  };
+}])

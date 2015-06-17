@@ -1,0 +1,77 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  in_room_shopping: "IN-ROOM SHOPPING"
+  same_day_delivery: "* Same day free delivery<br>for orders placed before 12 pm"
+  check_out: "CHECK OUT"
+  add_to_cart: "Add to Cart"
+  shopping_cart: "SHOPPING CART"
+  total: "Total: HKD 0"
+  proceed_to_purchase: "PROCEED TO PURCHASE"
+  item_added_to_cart: "Item(s) added to cart."
+  smartphones: "Smartphones"
+  souvenirs: "Souvenirs"
+  beauty: "Beauty"
+  health: "Health"
+  jewellery: "Jewellery"
+  watches: "Watches"
+  p0:
+    name: "KEE WAH"
+    description: "“Hong Kong Kee Gift” Gift Box"
+    description2: "<p><strong>Description</strong></p><p>This authentic taste of Hong Kong in a box includes 10 different types of local favorite pastries such as pineapple shortcake, pineapple shortcake with walnut, mango shortcake, honeydew melon shortcake, mini walnut cookies, almond biscuits, panda cookies, ginger cookies, butter eggrolls and sesame biscuits. This could be the perfect souvenir to bring back to your friends and family for a taste of the city’s traditional bakery goodness.</p><br><p><strong>Terms and conditions</p><p>Buying on handy is easy. Simply select your desired product, confirm your order, and the purchase will be charged to your hotel room bill. The product will be delivered to your hotel on the same day if you place your order before 12 pm and on the next day if you place your order after 12 pm.</p><p>This product is non-refundable. Exchange is allowed within 7 days if your purchase of this product is damaged at the time of delivery or faulty with no fault on your part. To exchange an item, please call us on +852 6466 5241.</p>"
+  p1:
+    name: "KEE WAH"
+    description: "Wife Cakes (Winter Melon Pastries) Gift Box (6 pieces)"
+    description2: "<p><strong>Description</strong></p><p>One of Hong Kong’s most classic traditional delicacies, this romantic sweet pastry is made with the finest flour, winter melon paste and sesame that smells just as good as it tastes.</p><br><p><strong>Terms and conditions</p><p>Buying on handy is easy. Simply select your desired product, confirm your order, and the purchase will be charged to your hotel room bill. The product will be delivered to your hotel on the same day if you place your order before 12 pm and on the next day if you place your order after 12 pm.</p><p>This product is non-refundable. Exchange is allowed within 7 days if your purchase of this product is damaged at the time of delivery or faulty with no fault on your part. To exchange an item, please call us on +852 6466 5241.</p>"
+  p2:
+    name: "KOI KEI"
+    description: "Whole Almond Cookie Box (6 pieces)"
+    description2: "<p><strong>Description</strong></p><p>This box contains six pieces of Koi Kei’s renowned almond goodness that will melt in your mouth and melt your heart. Be sure to snatch a piece before they are all gone!</p><br><p><strong>Terms and conditions</p><p>Buying on handy is easy. Simply select your desired product, confirm your order, and the purchase will be charged to your hotel room bill. The product will be delivered to your hotel on the same day if you place your order before 12 pm and on the next day if you place your order after 12 pm.</p><p>This product is non-refundable. Exchange is allowed within 7 days if your purchase of this product is damaged at the time of delivery or faulty with no fault on your part. To exchange an item, please call us on +852 6466 5241.</p>"
+  p3:
+    name: "JENNY BAKERY"
+    description: "8 Mix Nuts Cookies (Big)"
+    description2: "<p><strong>Description</strong></p><p>Jenny Bakery is Hong Kong’s home-grown butter cookie phenomenon. Skip the notoriously long queue and get your hands on this tin of eight different flavours of buttery and aroumatic cookies. Flavours include coffee, almond, cashew, hazelnut, walnut, pistachio, chocolate nut and macadamia nut.</p><br><p><strong>Terms and conditions</p><p>Buying on handy is easy. Simply select your desired product, confirm your order, and the purchase will be charged to your hotel room bill. The product will be delivered to your hotel on the same day if you place your order before 12 pm and on the next day if you place your order after 12 pm.</p><p>This product is non-refundable. Exchange is allowed within 7 days if your purchase of this product is damaged at the time of delivery or faulty with no fault on your part. To exchange an item, please call us on +852 6466 5241.</p>"
+  p4:
+    name: "BRAND’S®"
+    description: "Bird’s Nest with Rock Sugar"
+    description2: "<p><strong>Description</strong></p><p>BRAND’S® bird’s nest comprises of premium quality bird’s nest and has an all-natural sweet flavor from rock sugar. This preservative-free product is especially popular amongst the ladies as it helps maintain skin radiance and good health.</p><br><p><strong>Terms and conditions</p><p>Buying on handy is easy. Simply select your desired product, confirm your order, and the purchase will be charged to your hotel room bill. The product will be delivered to your hotel on the same day if you place your order before 12 pm and on the next day if you place your order after 12 pm.</p><p>This product is non-refundable. Exchange is allowed within 7 days if your purchase of this product is damaged at the time of delivery or faulty with no fault on your part. To exchange an item, please call us on +852 6466 5241.</p>"
+  p5:
+    name: "SK-II"
+    description: "CLASSIC CARE Facial Treatment Essence (250ml)"
+    description2: "<p><strong>Description</strong></p><p>SK-II Facial Treatment Essence has more than 90% pure Pitera and is often described as SKI-II’s “miracle water”. The ultra-refreshing Facial Treatment Essence balances skin's pH, sebum secretion, moisture and oxygen levels, and restores skin’s natural 28-day renewal cycle, making skin smoother and more radiant. It also soothes and refreshes skin from sunburn and burning sensation.</p><br><p><strong>Terms and conditions</p><p>Buying on handy is easy. Simply select your desired product, confirm your order, and the purchase will be charged to your hotel room bill. The product will be delivered to your hotel on the same day if you place your order before 12 pm and on the next day if you place your order after 12 pm.</p><p>This product may be exchanged (subject to stock availability) or returned within 7 days of purchase unless the product has been opened or used, is damaged or is missing parts. To exchange or return an item, please call us on +852 6466 5241.</p>"
+  p6:
+    name: "FRISO®"
+    description: "Friso® Gold 3 Growing-up Milk (900g)"
+    description2: "<p><strong>Description</strong></p><p>Friso® Gold 3 is specially formulated to meet the nutritional demands of a growing child. It contains the following nutrients to support immunity: Probiotics, Zinc, Nucleotides and Selenium. Friso® Gold 3 also contains the following important nutrients to support your child’s healthy growth & development: Prebiotics (GOS), DHA, AA, SA and Taurine.</p><br><p><strong>Terms and conditions</p><p>Buying on handy is easy. Simply select your desired product, confirm your order, and the purchase will be charged to your hotel room bill. The product will be delivered to your hotel on the same day if you place your order before 12 pm and on the next day if you place your order after 12 pm.</p><p>This product may be exchanged (subject to stock availability) or returned within 7 days of purchase unless the product has been opened or used, is damaged or is missing parts. To exchange or return an item, please call us on +852 6466 5241.</p>"
+  p7:
+    name: "APPLE"
+    description: "iPhone 6 Plus 64 GB Gold"
+    description2: "<p><strong>Description</strong></p><p>Apple’s iPhone 6 Plus is a brand new generation of iPhone that is larger yet dramatically thinner, more powerful but remarkably power-efficient. Its new A8 chip delivers more power while driving a larger 5.5 inch Retina display. Coupled with the M8 motion coprocessor and increased battery life, iPhone 6 delivers an unmatched user experience.</p><br><p><strong>Terms and conditions</p><p>Buying on handy is easy. Simply select your desired product, confirm your order, and the purchase will be charged to your hotel room bill. The product will be delivered to your hotel on the same day if you place your order before 12 pm and on the next day if you place your order after 12 pm.</p><p>This product may be exchanged (subject to stock availability) or returned within 7 days of purchase unless the product has been opened or used, is damaged or is missing parts. To exchange or return an item, please call us on +852 6466 5241.</p>"
+  p8:
+    name: "TISSOT"
+    description: "Le Locle Automatic Gent"
+    description2: "<p><strong>Description</strong></p><p>The name Le Locle is a reliable ingredient of success. As well as being the name of Tissot's home and heritage, nestled in the Swiss Jura Mountains, it is the name of a hugely popular automatic watch family. The models display exquisite elegance with details such as Roman numerals and a traditional Le Locle signature which complete the picture of classical chic. These finish off soave daytime and evening looks with a flourish.</p><br><p><strong>Terms and conditions</p>Buying on handy is easy. Simply select your desired product, confirm your order, and the purchase will be charged to your hotel room bill. The product will be delivered to your hotel on the same day if you place your order before 12 pm and on the next day if you place your order after 12 pm.<p></p><p>This product may be exchanged (subject to stock availability) or returned within 7 days of purchase unless the product is damaged or is missing parts. To exchange or return an item, please call us on +852 6466 5241.</p>"
+  p9:
+    name: "MABELLE"
+    description: "Heart Shape Diamond Necklace - 18K/750 White Gold"
+    description2: "<p><strong>Description</strong></p><p>This is a lovely heart shaped necklace of 18K/750 white color gold. Pendant is made of 20 diamond stones (color G and clarity SI1) of a total weight of approximately 0.16 carat.</p><br><p><strong>Terms and conditions</p><p>Buying on handy is easy. Simply select your desired product, confirm your order, and the purchase will be charged to your hotel room bill. The product will be delivered to your hotel on the same day if you place your order before 12 pm and on the next day if you place your order after 12 pm.</p><p>This product may be exchanged (subject to stock availability) or returned within 7 days of purchase unless the product is damaged or is missing parts. To exchange or return an item, please call us on +852 6466 5241.</p>"
+

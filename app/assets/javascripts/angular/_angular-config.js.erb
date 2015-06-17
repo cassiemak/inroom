@@ -1,0 +1,9 @@
+var app = angular.module('shopping', ['ngRoute', 'ngSanitize', 'ui.bootstrap']);
+
+app.config(['$routeProvider',function($routeProvider) {
+  $routeProvider
+  .when('/',  {templateUrl: "<%= asset_path('product.html') %>",         controller: 'HomeCtrl'})
+  // .when('/details',  {templateUrl: "<%= asset_path('product.html') %>",         controller: 'DetailsCtrl'})
+  // .when('/',  {templateUrl: "<%= asset_path('total.html') %>",         controller: 'HomeCtrl'})
+
+}])
