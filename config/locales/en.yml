@@ -25,7 +25,7 @@ en:
   check_out: "CHECK OUT"
   add_to_cart: "Add to Cart"
   shopping_cart: "SHOPPING CART"
-  total: "Total: HKD 0"
+  total: "Total: HKD "
   proceed_to_purchase: "PROCEED TO PURCHASE"
   item_added_to_cart: "Item(s) added to cart."
   smartphones: "Smartphones"

@@ -31,7 +31,7 @@ app.controller('HomeCtrl', ['$scope', function($scope){
 
       $scope.detail = false;
       $scope.tab = false;
-      $scope.home = true;a
+      $scope.home = true;
     }
     else if (p == 'detail') {
       mixpanel.track(
@@ -60,6 +60,7 @@ app.controller('HomeCtrl', ['$scope', function($scope){
         price: p,
         piece: $scope.products[id],
         id: id,
+        subtotal: (p * q ),
       };
 
       mixpanel.track(
@@ -86,6 +87,7 @@ app.controller('HomeCtrl', ['$scope', function($scope){
       console.log("invalid quantity");
     }
   }
+
 
   var items = {
     smartphones:[],

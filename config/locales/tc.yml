@@ -25,7 +25,7 @@ tc:
   check_out: "結帳"
   add_to_cart: "加入購物籃"
   shopping_cart: "購物籃"
-  total: "總額l: HK$ 0"
+  total: "總額l: HK$ "
   proceed_to_purchase: "進行結帳程序"
   item_added_to_cart: "產品已加入購物籃."
   smartphones: "智能手機"

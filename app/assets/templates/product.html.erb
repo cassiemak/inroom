@@ -108,9 +108,10 @@
       <div class="shopping-details col-xs-6">
         <div class="shopping-title"><h2>{{product.piece.name}}</h2></div>
         <div class="shopping-description">{{product.piece.description}}</div>
-        <div class="shopping-price">HKD {{product.price}}</div>
+        <div class="shopping-price">HKD {{product.price}} x {{product.quantity}} </div>
         <div>
-          <h2 class="oos">Out of Stock</h2>
+          <!-- <h2 class="oos">Out of Stock</h2> -->
+          <h2 class="shopping-price">Subtotal: {{product.subtotal}} </h2>
         </div>
       </div>
     </div>
@@ -118,7 +119,7 @@
 
   <div class="footer row">
     <div class="total">
-      <h1><%= I18n.t('total') %></h1>
+      <h1><%= I18n.t('total') %> {{total}} </h1>
       <div class="center">
         <button class="btn btn-xs cart-button" ng-click="switch('purchase', 'cart')">PROCEED TO PURCHASE</button>
       </div>
