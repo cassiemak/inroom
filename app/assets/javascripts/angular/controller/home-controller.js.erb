@@ -8,10 +8,6 @@ app.controller('HomeCtrl', ['$scope', function($scope){
   $scope.infotab = false;
   $scope.shoppingCart = [];
 
-  // $scope.infoSwitch = function(){
-  //   $scope.infotab = !$scope.infotab;
-  // }
-
   $scope.switch = function(p, ref) {
     if (p == 'tab') {
       mixpanel.track(
@@ -90,7 +86,6 @@ app.controller('HomeCtrl', ['$scope', function($scope){
     }
   }
 
-
   var items = {
     smartphones:[],
     souvenirs:[],
@@ -112,97 +107,161 @@ app.controller('HomeCtrl', ['$scope', function($scope){
   items.souvenirs = {
   0:{
       id: 0, 
-      name: I18n.t('p0.name'),
-      description: I18n.t('p0.description'),
-      description2: I18n.t('p0.description2'),
-      price: 138,
-      pix: "<%=asset_path('KeeWah.png')%>"
+      // name: I18n.t('p0.name'),
+      name: "Lobster Bisque Risotto",
+      // description: I18n.t('p0.description'),
+      // description2: I18n.t('p0.description2'),
+      price: 215,
+      // pix: "<%=asset_path('KeeWah.png')%>"
   },
   1:{
       id: 1, 
-      name: I18n.t('p1.name'),
-      description: I18n.t('p1.description'),
-      description2: I18n.t('p1.description2'),
-      price: 80,
-      pix: "<%=asset_path('KeeWah2.png')%>"
+      // name: I18n.t('p1.name'),
+      name: "Beef Shank Lasagna",
+      // description: I18n.t('p1.description'),
+      // description2: I18n.t('p1.description2'),
+      price: 175,
+      // pix: "<%=asset_path('KeeWah2.png')%>"
   },
   2:{
       id: 2,
-      name: I18n.t('p2.name'),
-      description: I18n.t('p2.description'),
-      description2: I18n.t('p2.description2'),
-      price: 36,
-      pix: "<%=asset_path('KoiKei.png')%>"
-  },
-  3:{
-      id: 3, 
-      name: I18n.t('p3.name'),
-      description: I18n.t('p3.description'),
-      description2: I18n.t('p3.description2'),
-      price: 165,
-      pix: "<%=asset_path('Jenny1.png')%>"
-  },
-  4:{
-      id: 4,
-      name: I18n.t('p4.name'),
-      description: I18n.t('p4.description'),
-      description2: I18n.t('p4.description2'),
-      price: 248,
-      pix: "<%=asset_path('brands.png')%>"
+      name: "Spaghetti Alle Vongole",
+      // name: I18n.t('p2.name'),
+      // description: I18n.t('p2.description'),
+      // description2: I18n.t('p2.description2'),
+      price: 195,
+      // pix: "<%=asset_path('KoiKei.png')%>"
   }};
 
   items.beauty = {
   5:{
       id: 5, 
-      name: I18n.t('p5.name'),
-      description: I18n.t('p5.description'),
-      description2: I18n.t('p5.description2'),
-      price: 1300,
-      pix: "<%=asset_path('SKII.png')%>"
+      name: "Homemade U.S. Beef Burger",
+      // name: I18n.t('p5.name'),
+      // description: I18n.t('p5.description'),
+      // description2: I18n.t('p5.description2'),
+      price: 195,
+      // pix: "<%=asset_path('SKII.png')%>"
+  },
+  3:{
+      id: 3, 
+      // name: I18n.t('p3.name'),
+      name: "Chargrilled Dry-Aged Rib-Eye",
+      // description: I18n.t('p3.description'),
+      // description2: I18n.t('p3.description2'),
+      price: 295,
+      // pix: "<%=asset_path('Jenny1.png')%>"
+  },
+  4:{
+      id: 4,
+      name: "EAST Club Sandwich",
+      // name: I18n.t('p4.name'),
+      // description: I18n.t('p4.description'),
+      // description2: I18n.t('p4.description2'),
+      price: 190,
+      // pix: "<%=asset_path('brands.png')%>"
   }};
 
   items.health = {
   6:{
       id: 6, 
-      name: I18n.t('p6.name'),
-      description: I18n.t('p6.description'),
-      description2: I18n.t('p6.description2'),
-      price: 272,
-      pix: "<%=asset_path('Friso.png')%>"
+      name: "Hainan Chicken Rice",
+      // name: I18n.t('p6.name'),
+      // description: I18n.t('p6.description'),
+      // description2: I18n.t('p6.description2'),
+      price: 195,
+      // pix: "<%=asset_path('Friso.png')%>"
+  },
+  10:{
+      id: 10, 
+      name: "Indian Curry with Naan Bread",
+      // name: I18n.t('p6.name'),
+      // description: I18n.t('p6.description'),
+      // description2: I18n.t('p6.description2'),
+      price: 165,
+      // pix: "<%=asset_path('Friso.png')%>"
+  },
+  11:{
+      id: 11, 
+      name: "Wok Fried Scallop",
+      // name: I18n.t('p6.name'),
+      // description: I18n.t('p6.description'),
+      // description2: I18n.t('p6.description2'),
+      price: 195,
+      // pix: "<%=asset_path('Friso.png')%>"
   }};
 
   items.smartphones = {
   7:{
       id: 7, 
-      name: I18n.t('p7.name'),
-      description: I18n.t('p7.description'),
-      description2: I18n.t('p7.description2'),
-      price: 8088,
-      pix: "<%=asset_path('Iphone.png')%>"
+      name: "Spiced Canadian Crab Cakes",
+      // name: I18n.t('p7.name'),
+      // description: I18n.t('p7.description'),
+      // description2: I18n.t('p7.description2'),
+      price: 135,
+      // pix: "<%=asset_path('Iphone.png')%>"
+  },
+  12:{
+      id: 12, 
+      name: "Whole Grilled Tiger Prawns",
+      // name: I18n.t('p6.name'),
+      // description: I18n.t('p6.description'),
+      // description2: I18n.t('p6.description2'),
+      price: 145,
+      // pix: "<%=asset_path('Friso.png')%>"
+  },
+  13:{
+      id: 13, 
+      name: "French Onion Soup",
+      // name: I18n.t('p6.name'),
+      // description: I18n.t('p6.description'),
+      // description2: I18n.t('p6.description2'),
+      price: 125,
+      // pix: "<%=asset_path('Friso.png')%>"
   }};
 
-  items.watches = {
-  8:{
-      id: 8, 
-      name: I18n.t('p8.name'),
-      description: I18n.t('p8.description'),
-      description2: I18n.t('p8.description2'),
-      price: 4400,
-      pix: "<%=asset_path('Tissot.png')%>"
-  }};
+  // items.watches = {
+  // 8:{
+  //     id: 8, 
+  //     name: I18n.t('p8.name'),
+  //     // description: I18n.t('p8.description'),
+  //     // description2: I18n.t('p8.description2'),
+  //     price: 4400,
+  //     // pix: "<%=asset_path('Tissot.png')%>"
+  // }};
 
   items.jewellery = {
   9:{
       id: 9, 
-      name: I18n.t('p9.name'),
-      description: I18n.t('p9.description'),
-      description2: I18n.t('p9.description2'),
-      price: 4760,
-      pix: "<%=asset_path('Mabelle.png')%>"
+      name: "Crepe Suzette",
+      // name: I18n.t('p9.name'),
+      // description: I18n.t('p9.description'),
+      // description2: I18n.t('p9.description2'),
+      price: 65,
+      // pix: "<%=asset_path('Mabelle.png')%>"
+  },
+  8:{
+      id: 8, 
+      name: "Banoffee Pie",
+      // name: I18n.t('p6.name'),
+      // description: I18n.t('p6.description'),
+      // description2: I18n.t('p6.description2'),
+      price: 65,
+      // pix: "<%=asset_path('Friso.png')%>"
+  },
+  14:{
+      id: 14, 
+      name: "Caramel and Chocolate Concorde",
+      // name: I18n.t('p6.name'),
+      // description: I18n.t('p6.description'),
+      // description2: I18n.t('p6.description2'),
+      price: 65,
+      // pix: "<%=asset_path('Friso.png')%>"
   }};
 
   $scope.products = items.souvenirs;
   $scope.category = categories.souvenirs;
+
   $scope.getProducts = function(params){
     mixpanel.track(
       "Category",

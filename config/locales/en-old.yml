@@ -20,27 +20,27 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  in_room_shopping: "ROOM SERVICE"
+  in_room_shopping: "IN-ROOM SHOPPING"
   same_day_delivery: "* Same day free delivery<br>for orders placed before 12 pm"
   check_out: "CHECK OUT"
   add_to_cart: "Add to Cart"
-  shopping_cart: "FOOD CART"
+  shopping_cart: "SHOPPING CART"
   total: "Total: HKD "
   proceed_to_purchase: "PROCEED TO PURCHASE"
   item_added_to_cart: "Item(s) added to cart."
   checking_out: "Our staff will contact you shortly. Thank you for your order!"
-  smartphones: "Starter"
-  souvenirs: "Italian"
-  beauty: "Mains"
-  health: "Asian"
-  jewellery: "Dessert"
+  smartphones: "Smartphones"
+  souvenirs: "Souvenirs"
+  beauty: "Beauty"
+  health: "Health"
+  jewellery: "Jewellery"
   watches: "Watches"
   p0:
-    name: "Spiced Canadian Crab Cakes"
+    name: "KEE WAH"
     description: "“Hong Kong Kee Gift” Gift Box"
     description2: "<p><strong>Description</strong></p><p>This authentic taste of Hong Kong in a box includes 10 different types of local favorite pastries such as pineapple shortcake, pineapple shortcake with walnut, mango shortcake, honeydew melon shortcake, mini walnut cookies, almond biscuits, panda cookies, ginger cookies, butter eggrolls and sesame biscuits. This could be the perfect souvenir to bring back to your friends and family for a taste of the city’s traditional bakery goodness.</p><br><p><strong>Terms and conditions</p><p>Buying on handy is easy. Simply select your desired product, confirm your order, and the purchase will be charged to your hotel room bill. The product will be delivered to your hotel on the same day if you place your order before 12 pm and on the next day if you place your order after 12 pm.</p><p>This product is non-refundable. Exchange is allowed within 7 days if your purchase of this product is damaged at the time of delivery or faulty with no fault on your part. To exchange an item, please call us on +852 6466 5241.</p>"
   p1:
-    name: "Whole Grilled Tiger Prawns"
+    name: "KEE WAH"
     description: "Wife Cakes (Winter Melon Pastries) Gift Box (6 pieces)"
     description2: "<p><strong>Description</strong></p><p>One of Hong Kong’s most classic traditional delicacies, this romantic sweet pastry is made with the finest flour, winter melon paste and sesame that smells just as good as it tastes.</p><br><p><strong>Terms and conditions</p><p>Buying on handy is easy. Simply select your desired product, confirm your order, and the purchase will be charged to your hotel room bill. The product will be delivered to your hotel on the same day if you place your order before 12 pm and on the next day if you place your order after 12 pm.</p><p>This product is non-refundable. Exchange is allowed within 7 days if your purchase of this product is damaged at the time of delivery or faulty with no fault on your part. To exchange an item, please call us on +852 6466 5241.</p>"
   p2:
