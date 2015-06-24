@@ -15,11 +15,20 @@
 
   <div class="shoppingItem" ng-repeat="product in products">
     <div class="oneshoppingItem row">
-      <!--<div class="shopping-pix col-xs-4">
-        <a ng-click="setProduct(product, 'home-image')"><img src='{{product.pix}}'></a>
-      </div> -->
-      <div class="shopping-details col-xs-offset-1 col-xs-8">
-        <div class="shopping-title"><h2><a ng-click="setProduct(product, 'home-name')">{{product.name}}</a></h2></div>
+      <div class="shopping-pix col-xs-3">
+        <!-- <a ng-click="setProduct(product, 'home-image')"> -->
+          <img src='{{product.pix}}'>
+        <!-- </a> -->
+      </div> 
+      <!-- <div class="shopping-details col-xs-offset-1 col-xs-8"> -->
+      <div class="shopping-details col-xs-7">
+        <div class="shopping-title">
+          <h2>
+            <!-- <a ng-click="setProduct(product, 'home-name')"> -->
+            {{product.name}}
+            <!-- </a> -->
+          </h2>
+        </div>
         <div class="shopping-description">{{product.description}}</div>
         <div class="shopping-price">HKD {{product.price}}</div>
         <div class="shopping-button">
@@ -87,7 +96,7 @@
       <button class="col-xs-2" ng-click="getProducts('health')"><img src="<%=asset_path('HEALTH.png')%>"></button>
       <button class="col-xs-2" ng-click="getProducts('jewellery')"><img src="<%=asset_path('JEWELLERY.png')%>"></button>
       <button class="col-xs-2" ng-click="getProducts('smartphones')"><img src="<%=asset_path('SMARTPHONE.png')%>"></button>
-      <button class="col-xs-2" ng-click="getProducts('watches')"><img src="<%=asset_path('WATCHES.png')%>"></button>
+<!--       <button class="col-xs-2" ng-click="getProducts('watches')"><img src="<%=asset_path('WATCHES.png')%>"></button> -->
     </div>
   </div>
 </div>
@@ -104,10 +113,11 @@
 
   <div class="shoppingItem" ng-repeat="product in shoppingCart">
     <div class="oneshoppingItem row">
-      <!-- <div class="shopping-pix col-xs-6">
+      <div class="shopping-pix col-xs-6">
         <img src='{{product.piece.pix}}'>
-      </div> -->
-      <div class="shopping-details col-xs-offset-1 col-xs-11">
+      </div>
+      <!-- <div class="shopping-details col-xs-offset-1 col-xs-11"> -->
+      <div class="shopping-details col-xs-6">
         <div class="shopping-title"><h2>{{product.piece.name}}</h2></div>
         <div class="shopping-description">{{product.piece.description}}</div>
         <div class="shopping-price">HKD {{product.price}} x {{product.quantity}} </div>

@@ -1,5 +1,28 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  config.action_mailer.delivery_method = :smtp
+  
+  config.action_mailer.raise_delivery_errors = true
+
+  config.action_mailer.perform_deliveries = true
+  # SMTP settings for gmail
+  config.action_mailer.smtp_settings = {
+   :port                 => 465,
+   # :address              => 'smtp.mailgun.org',
+   # :user_name            => 'postmaster@tinklabs.com',
+   # :password             => '0hglygt607g1',
+   :authentication       => "plain",
+   # :ssl                  => true,
+   :address              => "smtp.gmail.com",
+   :user_name            => "reservations@tinklabs.com",
+   :password             => "philiscute",
+
+   # :user_name            => ENV['gmail_username'],
+   # :password             => ENV['gmail_password'],
+   # :enable_starttls_auto => true
+  }
+
+
 
   # Code is not reloaded between requests.
   config.cache_classes = true

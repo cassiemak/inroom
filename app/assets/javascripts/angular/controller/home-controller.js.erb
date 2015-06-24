@@ -46,6 +46,7 @@ app.controller('HomeCtrl', ['$scope', function($scope){
       );
       console.log('Pop up says Our staff will contact you shortly. Thank you for your order!');
       $('#thanks-order').stop(true, true).show().css('opacity', 0.8).delay(3000).fadeOut(1000);
+      // send order email to hotel with room # details
     }
   }
 
@@ -112,7 +113,7 @@ app.controller('HomeCtrl', ['$scope', function($scope){
       // description: I18n.t('p0.description'),
       // description2: I18n.t('p0.description2'),
       price: 215,
-      // pix: "<%=asset_path('KeeWah.png')%>"
+      pix: "<%=asset_path('KeeWah.png')%>"
   },
   1:{
       id: 1, 
@@ -121,7 +122,7 @@ app.controller('HomeCtrl', ['$scope', function($scope){
       // description: I18n.t('p1.description'),
       // description2: I18n.t('p1.description2'),
       price: 175,
-      // pix: "<%=asset_path('KeeWah2.png')%>"
+      pix: "<%=asset_path('KeeWah2.png')%>"
   },
   2:{
       id: 2,
@@ -130,7 +131,7 @@ app.controller('HomeCtrl', ['$scope', function($scope){
       // description: I18n.t('p2.description'),
       // description2: I18n.t('p2.description2'),
       price: 195,
-      // pix: "<%=asset_path('KoiKei.png')%>"
+      pix: "<%=asset_path('KoiKei.png')%>"
   }};
 
   items.beauty = {
@@ -141,7 +142,7 @@ app.controller('HomeCtrl', ['$scope', function($scope){
       // description: I18n.t('p5.description'),
       // description2: I18n.t('p5.description2'),
       price: 195,
-      // pix: "<%=asset_path('SKII.png')%>"
+      pix: "<%=asset_path('SKII.png')%>"
   },
   3:{
       id: 3, 
@@ -150,7 +151,7 @@ app.controller('HomeCtrl', ['$scope', function($scope){
       // description: I18n.t('p3.description'),
       // description2: I18n.t('p3.description2'),
       price: 295,
-      // pix: "<%=asset_path('Jenny1.png')%>"
+      pix: "<%=asset_path('Jenny1.png')%>"
   },
   4:{
       id: 4,
@@ -159,7 +160,7 @@ app.controller('HomeCtrl', ['$scope', function($scope){
       // description: I18n.t('p4.description'),
       // description2: I18n.t('p4.description2'),
       price: 190,
-      // pix: "<%=asset_path('brands.png')%>"
+      pix: "<%=asset_path('brands.png')%>"
   }};
 
   items.health = {
@@ -170,7 +171,7 @@ app.controller('HomeCtrl', ['$scope', function($scope){
       // description: I18n.t('p6.description'),
       // description2: I18n.t('p6.description2'),
       price: 195,
-      // pix: "<%=asset_path('Friso.png')%>"
+      pix: "<%=asset_path('Friso.png')%>"
   },
   10:{
       id: 10, 
@@ -179,7 +180,7 @@ app.controller('HomeCtrl', ['$scope', function($scope){
       // description: I18n.t('p6.description'),
       // description2: I18n.t('p6.description2'),
       price: 165,
-      // pix: "<%=asset_path('Friso.png')%>"
+      pix: "<%=asset_path('Friso.png')%>"
   },
   11:{
       id: 11, 
@@ -188,7 +189,7 @@ app.controller('HomeCtrl', ['$scope', function($scope){
       // description: I18n.t('p6.description'),
       // description2: I18n.t('p6.description2'),
       price: 195,
-      // pix: "<%=asset_path('Friso.png')%>"
+      pix: "<%=asset_path('Friso.png')%>"
   }};
 
   items.smartphones = {
@@ -199,7 +200,7 @@ app.controller('HomeCtrl', ['$scope', function($scope){
       // description: I18n.t('p7.description'),
       // description2: I18n.t('p7.description2'),
       price: 135,
-      // pix: "<%=asset_path('Iphone.png')%>"
+      pix: "<%=asset_path('Iphone.png')%>"
   },
   12:{
       id: 12, 
@@ -208,7 +209,7 @@ app.controller('HomeCtrl', ['$scope', function($scope){
       // description: I18n.t('p6.description'),
       // description2: I18n.t('p6.description2'),
       price: 145,
-      // pix: "<%=asset_path('Friso.png')%>"
+      pix: "<%=asset_path('Friso.png')%>"
   },
   13:{
       id: 13, 
@@ -217,7 +218,7 @@ app.controller('HomeCtrl', ['$scope', function($scope){
       // description: I18n.t('p6.description'),
       // description2: I18n.t('p6.description2'),
       price: 125,
-      // pix: "<%=asset_path('Friso.png')%>"
+      pix: "<%=asset_path('Friso.png')%>"
   }};
 
   // items.watches = {
@@ -227,7 +228,7 @@ app.controller('HomeCtrl', ['$scope', function($scope){
   //     // description: I18n.t('p8.description'),
   //     // description2: I18n.t('p8.description2'),
   //     price: 4400,
-  //     // pix: "<%=asset_path('Tissot.png')%>"
+      pix: "<%=asset_path('Tissot.png')%>"
   // }};
 
   items.jewellery = {
@@ -238,7 +239,7 @@ app.controller('HomeCtrl', ['$scope', function($scope){
       // description: I18n.t('p9.description'),
       // description2: I18n.t('p9.description2'),
       price: 65,
-      // pix: "<%=asset_path('Mabelle.png')%>"
+      pix: "<%=asset_path('Mabelle.png')%>"
   },
   8:{
       id: 8, 
@@ -247,7 +248,7 @@ app.controller('HomeCtrl', ['$scope', function($scope){
       // description: I18n.t('p6.description'),
       // description2: I18n.t('p6.description2'),
       price: 65,
-      // pix: "<%=asset_path('Friso.png')%>"
+      pix: "<%=asset_path('Friso.png')%>"
   },
   14:{
       id: 14, 
@@ -256,7 +257,7 @@ app.controller('HomeCtrl', ['$scope', function($scope){
       // description: I18n.t('p6.description'),
       // description2: I18n.t('p6.description2'),
       price: 65,
-      // pix: "<%=asset_path('Friso.png')%>"
+      pix: "<%=asset_path('Friso.png')%>"
   }};
 
   $scope.products = items.souvenirs;

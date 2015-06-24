@@ -14,7 +14,28 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
+
+  config.action_mailer.perform_deliveries = true
+  
+  # config.action_mailer.preview_path = 
+  config.action_mailer.delivery_method = :smtp
+  # SMTP settings for gmail
+  config.action_mailer.smtp_settings = {
+   :port                 => 465,
+   :address              => 'smtp.mailgun.org',
+   :user_name            => 'postmaster@tinklabs.com',
+   :password             => '0hglygt607g1',
+   :authentication       => "plain",
+   # :ssl                  => true,
+   # :address              => "smtp.gmail.com",
+   # :user_name            => "reservations@tinklabs.com",
+   # :password             => "philiscute",
+
+   # :user_name            => ENV['gmail_username'],
+   # :password             => ENV['gmail_password'],
+   # :enable_starttls_auto => true
+  }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
