@@ -7,6 +7,29 @@ app.controller('HomeCtrl', ['$scope', function($scope){
   $scope.home = true;
   $scope.infotab = false;
   $scope.shoppingCart = [];
+  $scope.order=[
+    {
+      'Order #': 1,
+      'Food': 'Chicken Wings',
+      'quantity': 2,
+    },{
+      'Order #': 2,
+      'Food': 'Soup',
+      'quantity': 1,
+    }
+  ];
+
+  var sendEmail = function (order){
+    $.ajax({
+      type: 'GET',
+      url: "http://api3.handy.travel/apis/email?to=cassie.mak@tinklabs.com&subject=Order Details#{scope.total}&body=#{$scope.shoppingCart}",
+      dataType: 'JSON',
+      success: function(response){
+        console.log(response);
+      }
+    });
+  }
+
 
   $scope.switch = function(p, ref) {
     if (p == 'tab') {
@@ -47,6 +70,7 @@ app.controller('HomeCtrl', ['$scope', function($scope){
       console.log('Pop up says Our staff will contact you shortly. Thank you for your order!');
       $('#thanks-order').stop(true, true).show().css('opacity', 0.8).delay(3000).fadeOut(1000);
       // send order email to hotel with room # details
+      sendEmail($scope.shoppingCart);
     }
   }
 
