@@ -7,29 +7,29 @@ app.controller('HomeCtrl', ['$scope', function($scope){
   $scope.home = true;
   $scope.infotab = false;
   $scope.shoppingCart = [];
-  $scope.order=[
-    {
-      'Order #': 1,
-      'Food': 'Chicken Wings',
-      'quantity': 2,
-    },{
-      'Order #': 2,
-      'Food': 'Soup',
-      'quantity': 1,
-    }
-  ];
 
-  var sendEmail = function (order){
+  var makeString = function(arr){
+    var string = "";
+    for (var i =0; i < arr.length; i++){
+      string += arr[i].piece.name + " x "; 
+      string += arr[i].quantity + " <br>"; 
+    }
+    console.log(string);
+    return string; 
+  }
+
+  var sendEmail = function (){
+    order = makeString($scope.shoppingCart);
+    var url = "http://api3.handy.travel/apis/email?to=cassie.mak@tinklabs.com&subject=Order Details&body="+"Room Service Order from room <br>" + encodeURIComponent(order);
     $.ajax({
       type: 'GET',
-      url: "http://api3.handy.travel/apis/email?to=cassie.mak@tinklabs.com&subject=Order Details#{scope.total}&body=#{$scope.shoppingCart}",
+      url: url,
       dataType: 'JSON',
       success: function(response){
         console.log(response);
       }
     });
   }
-
 
   $scope.switch = function(p, ref) {
     if (p == 'tab') {
@@ -70,14 +70,14 @@ app.controller('HomeCtrl', ['$scope', function($scope){
       console.log('Pop up says Our staff will contact you shortly. Thank you for your order!');
       $('#thanks-order').stop(true, true).show().css('opacity', 0.8).delay(3000).fadeOut(1000);
       // send order email to hotel with room # details
-      sendEmail($scope.shoppingCart);
+      sendEmail();
     }
   }
 
   $scope.addItem = function (p, q, id, ref) {
     if (q > 0){
       $scope.total = $scope.total + (p * q);
-      console.log($scope.total, p, q, id);
+      // console.log($scope.total, p, q, id);
       var purchase = {
         quantity: q,
         price: p,
@@ -85,6 +85,7 @@ app.controller('HomeCtrl', ['$scope', function($scope){
         id: id,
         subtotal: (p * q ),
       };
+      console.log(purchase);
 
       mixpanel.track(
         "Add",
@@ -102,7 +103,8 @@ app.controller('HomeCtrl', ['$scope', function($scope){
       if (!found) {
         $scope.shoppingCart.push(purchase);
       }
-      console.log($scope.shoppingCart);
+      // console.log('shoppingCart= ' + purchase);
+      // console.log($scope.shoppingCart);
 
       $('#toast').stop(true, true).show().css('opacity', 0.8).delay(3000).fadeOut(1000);
     }
@@ -244,16 +246,6 @@ app.controller('HomeCtrl', ['$scope', function($scope){
       price: 125,
       pix: "<%=asset_path('Friso.png')%>"
   }};
-
-  // items.watches = {
-  // 8:{
-  //     id: 8, 
-  //     name: I18n.t('p8.name'),
-  //     // description: I18n.t('p8.description'),
-  //     // description2: I18n.t('p8.description2'),
-  //     price: 4400,
-      pix: "<%=asset_path('Tissot.png')%>"
-  // }};
 
   items.jewellery = {
   9:{
