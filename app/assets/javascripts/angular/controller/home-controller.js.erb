@@ -20,7 +20,8 @@ app.controller('HomeCtrl', ['$scope', function($scope){
 
   var sendEmail = function (){
     order = makeString($scope.shoppingCart);
-    var url = "http://api3.handy.travel/apis/email?to=cassie.mak@tinklabs.com&subject=Order Details&body="+"Room Service Order from room <br>" + encodeURIComponent(order);
+    var url = "http://api3.handy.travel/apis/email?barcode=" + barcode + "&to=cassie.mak@tinklabs.com&subject=Order+Details&body=" + encodeURIComponent("Room Service Order<br>" + order);
+    console.log(url);
     $.ajax({
       type: 'GET',
       url: url,

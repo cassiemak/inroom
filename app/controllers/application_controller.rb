@@ -4,7 +4,13 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_filter :init
 
-
+  before_filter :handle_cookies
+  def handle_cookies
+    # Do whatever it is you want to do with your cookies
+    #@barcode = cookies[:barcode]
+    @barcode = request.cookies['barcode']
+    #@barcode = 'HelloMiffy'
+  end
 
   private def init
     if (request.env['HTTP_USER_AGENT'].include?('6040'))

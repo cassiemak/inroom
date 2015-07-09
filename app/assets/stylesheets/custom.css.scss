@@ -153,22 +153,22 @@ button.cart-button{
   font-weight:bold; 
   color: #FFFFFF;
   background-color: #d3d3d3; 
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#d3d3d3), to(#707070));
-  background-image: -webkit-linear-gradient(top, #d3d3d3, #707070);
-  background-image: -moz-linear-gradient(top, #d3d3d3, #707070);
-  background-image: -ms-linear-gradient(top, #d3d3d3, #707070);
-  background-image: -o-linear-gradient(top, #d3d3d3, #707070);
-  background-image: linear-gradient(to bottom, #d3d3d3, #707070);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#d3d3d3, endColorstr=#707070);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d3d3d3), to(#161616));
+  background-image: -webkit-linear-gradient(top, #d3d3d3, #161616);
+  background-image: -moz-linear-gradient(top, #d3d3d3, #161616);
+  background-image: -ms-linear-gradient(top, #d3d3d3, #161616);
+  background-image: -o-linear-gradient(top, #d3d3d3, #161616);
+  background-image: linear-gradient(to bottom, #d3d3d3, #161616);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#d3d3d3, endColorstr=#161616);
   &:hover{
     border:1px solid #a0a0a0;
     background-color: #bababa; 
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#bababa), to(#575757));
-    background-image: -webkit-linear-gradient(top, #bababa, #575757);
-    background-image: -moz-linear-gradient(top, #bababa, #575757);
-    background-image: -ms-linear-gradient(top, #bababa, #575757);
-    background-image: -o-linear-gradient(top, #bababa, #575757);
-    background-image: linear-gradient(to bottom, #bababa, #575757);
-    filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#bababa, endColorstr=#575757);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#bababa), to(#080808));
+    background-image: -webkit-linear-gradient(top, #bababa, #080808);
+    background-image: -moz-linear-gradient(top, #bababa, #080808);
+    background-image: -ms-linear-gradient(top, #bababa, #080808);
+    background-image: -o-linear-gradient(top, #bababa, #080808);
+    background-image: linear-gradient(to bottom, #bababa, #080808);
+    filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#bababa, endColorstr=#080808);
   }
 }
 
@@ -470,6 +470,10 @@ header h1 {
 .shoppingItem.detail .shopping-quantity input {
   height:56px;
   font-size:36px;
+}
+
+#purchase-button{
+  background-color: #329932;
 }
 
 #toast {
